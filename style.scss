@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@font-face {
+    font-family: "Cascadia Code";
+    src: url("fonts/Cascadia.ttf")
+  }
+
+*{
+    font-family: 'Cascadia Code' , sans-serif;
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+
+
+body{
+    background: url('/assets/windows-11-windows-10-minimalism-hd-wallpaper-c876bde870303c5820cce16ed8a244ca.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size:cover ;
+}
+
+.window{
+    max-width: 1000px;
+    width: 100%;
+    transform: translate(150px, 125px);
+    border-radius: 9px;
+    overflow: hidden;
+    border:1px solid #3a3a3b;
+    
+    
+
+    .window_header{
+        background-color: #333;
+        height: 40px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .tab{
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            font-size:11px;
+            letter-spacing: 0.3px;
+            background-color: #0c0c0c;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 240px;
+            color:#fff;
+            left:9px;
+            position: absolute;
+            bottom: 0;
+            border-top-left-radius: 8.5px;
+            border-top-right-radius: 8.5px;
+            font-weight: 500;
+            span{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            i{
+                padding:5px 8px;
+                border-radius: 5px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                justify-content: center;
+                right: 9px;
+
+                &:hover{
+                    
+                background-color: #1a1a1a;
+                }
+                
+                svg{
+                    width: 14px;
+                    height: 14px;
+                    path{
+                        fill:#fff;
+                    }
+                }
+            }
+            
+        }
+
+        .action_buttons{
+            position: absolute;
+            display: flex;
+            right:0;
+            height: 100%;
+            .action_btn{
+                width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                &:hover{
+                    background-color: #3f3f3f;
+                }
+    
+                .line{
+                    width: 10px;
+                    height: 1px;
+                    background-color: #fff;
+                }
+
+                .box{
+                    width: 10px;
+                    height: 10px;
+                    border:1px solid #fff;
+                    
+                }
+
+                &.times{
+                    &:hover{
+                        background-color: #c42b1c;
+                    }
+                    svg{
+                        width: 16px;
+                        height: 16px;
+                        path{
+                            fill:#fff;
+                        }
+                    }
+                }
+                
+
+            }
+        }
+    }
+
+    #app{
+        background-color: #0c0c0c;
+        font-size:15px;
+        color:#ccc;
+        padding:9px;
+        height: 600px;
+        overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            width:10px;
+            
+          }
+
+          &::-webkit-scrollbar-track {
+            width: 10px;
+            background-color: #2c2c2c;
+          }
+          
+          &::-webkit-scrollbar-track:hover {
+            background: #2c2c2c;
+            
+          }
+          
+          &::-webkit-scrollbar-thumb {
+            background: #9f9f9f; 
+            border-radius: 4px;
+          }
+
+        .type{
+            display: flex;
+        }
+
+        input{
+            outline: none;
+            border:none;
+            background-color: transparent;
+            color:inherit;
+            font-size: 15px;
+
+           
+        }
+    }
+}
+
+.terminal{
+    padding:0;
+    background-color: #0c0c0c;
+}
+
+
+
+
+
