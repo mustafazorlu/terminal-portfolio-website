@@ -72,6 +72,8 @@ const getInputValue = async () => {
         createCode("<b>-> social</b>", "My social media links");
         createBlank();
         createCode("<b>-> projects</b>", "My projects");
+        createBlank();
+        createCode("<b>-> contact</b>", "Send mail to me");
     } else if (value === "projects") {
         trueValue(value);
         createBlank();
