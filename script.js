@@ -31,7 +31,7 @@ const open_terminal = async () => {
     createBlank();
     createCode("<b>-> about me</b>", "Who am i and what do i do.");
     createBlank();
-    
+
     await delay(500);
     new_line();
 };
@@ -60,7 +60,8 @@ const removeInput = () => {
 };
 
 const getInputValue = async () => {
-    const value = document.querySelector("input").value;
+    const value = document.querySelector("input").value.toLowerCase();
+    
 
     if (value === "all") {
         trueValue(value);
@@ -95,14 +96,15 @@ const getInputValue = async () => {
         createText(
             "<a style='color:#fff; text-decoration:underline;' href='https://www.linkedin.com/in/mustafa-zorlu/' target='_blank'>linkedin.com/in/mustafa-zorlu/</a>"
         );
-    }
-    else if(value === 'contact'){
+    } else if (value === "contact") {
         trueValue(value);
         createBlank();
         createText(
             "<a style='color:#fff; text-decoration:underline;' href='mailto:mzorlu3579@gmail.com' target='_blank'>mzorlu3579@gmail.com</a>"
         );
-    
+    } else if (value === "love") {
+        createText("H ❤ M");
+        createBlank();
     } else {
         falseValue(value);
         createText(
