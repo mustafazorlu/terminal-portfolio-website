@@ -17,15 +17,17 @@ body {
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
 }
 
 .window {
   max-width: 1000px;
   width: 100%;
-  -webkit-transform: translate(150px, 125px);
-          transform: translate(150px, 125px);
   border-radius: 9px;
   overflow: hidden;
+  margin: 7%;
   border: 1px solid #3a3a3b;
 }
 
@@ -196,5 +198,22 @@ body {
 .terminal {
   padding: 0;
   background-color: #0c0c0c;
+}
+
+@media screen and (max-width: 1000px) {
+  .window {
+    width: 90% !important;
+    margin: 5% auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .window {
+    width: 90% !important;
+    margin: 5% auto;
+  }
+  .window .window_header .tab {
+    width: 175px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
